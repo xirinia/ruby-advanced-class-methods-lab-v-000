@@ -53,9 +53,9 @@ class Song
   def self.new_from_filename(string)
       song = self.new
       split = string.split("-")
-
       song.name = split[0].chop
       song.artist_name = split[1].chomp(".mp3")
+      song
   end
 
   def self.create_from_filename(string)
