@@ -51,8 +51,10 @@ class Song
       name_array.sort_by {|song| song.name}
     end
 
-    def self.new_from_filename(artist_name)
+    def self.new_from_filename(string)
+        split = string.split("-")
         song = self.new
-        song.artist_name = artist_name
+        song.name = split[0]
+        song.artist_name = split[1]
     end
 end
