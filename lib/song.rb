@@ -53,7 +53,7 @@ class Song
   def self.new_from_filename(string)
       split = string.split("-")
       song = self.new
-      song.name = split[0]
+      song.name = split[0].chop
       song.artist_name = split[1]
       binding.pry
   end
