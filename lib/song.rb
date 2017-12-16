@@ -51,7 +51,7 @@ class Song
       name_array.sort_by {|song| song.name}
     end
 
-    def self.create_from_filename(artist_name)
+    def self.new_from_filename(artist_name)
         song = self.new
         song.artist_name = artist_name
     end
