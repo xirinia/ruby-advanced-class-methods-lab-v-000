@@ -16,7 +16,7 @@ class Song
     @@all << song
     song
   end
-
+  
   def self.new_by_name(name)
     song = self.new
     song.name = name
@@ -51,7 +51,8 @@ class Song
       name_array.sort_by {|song| song.name}
     end
 
-    def self.create_from_filename
-
+    def self.create_from_filename(artist_name)
+        song = self.new
+        song.artist_name = artist_name
     end
 end
