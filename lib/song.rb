@@ -39,22 +39,25 @@ class Song
        song
     else
       self.create_by_name(name)
-
     end
   end
 
-    def self.alphabetical
-      name_array = []
-      @@all.each do |songs|
-        name_array << songs
-      end
-      name_array.sort_by {|song| song.name}
+  def self.alphabetical
+    name_array = []
+    @@all.each do |songs|
+      name_array << songs
     end
+    name_array.sort_by {|song| song.name}
+  end
 
-    def self.new_from_filename(string)
-        split = string.split("-")
-        song = self.new
-        song.name = split[0]
-        song.artist_name = split[1]
-    end
+  def self.new_from_filename(string)
+      split = string.split("-")
+      song = self.new
+      song.name = split[0]
+      song.artist_name = split[1]
+  end
+
+  def self.destroy_all
+    @@all.clears
+  end
 end
