@@ -56,7 +56,7 @@ class Song
       song.name = split[0].chop
       song.artist_name = split[1].chomp(".mp3")
       @@all << song
-      end
+  end
 
   def self.create_from_filename(string)
   end
