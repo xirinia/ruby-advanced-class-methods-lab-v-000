@@ -54,7 +54,7 @@ class Song
       song = self.new
       split = string.split("-")
       song.name = split[1].chomp(".mp3")
-      song.artist_name = split[0].chomp(" ")
+      song.artist_name = split[0]
       song
   end
 
