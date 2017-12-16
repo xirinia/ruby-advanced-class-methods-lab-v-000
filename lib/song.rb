@@ -62,6 +62,7 @@ class Song
     song = self.new
     song.name = split[0].chop
     song.artist_name = split[1].chomp(".mp3")
+    @@all <<song
   end
 
   def self.destroy_all
